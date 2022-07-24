@@ -15,7 +15,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <div>
             <h1>Productos</h1><br><br>
           
-            <form>
+            <form method="POST" id="formulario_productos">
                     <label for="pnombre">Producto:</label><br>
                     <input type="text" id="pnombre" name="nombre_producto" required><br><br><br>
                   
@@ -23,7 +23,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
                     <input type="file" id="img" name="lmagen_producto"><br><br><br>
                 
                     <label>Descripcion:</label><br>
-                    <textarea>  </textarea><br><br><br>
+                    <textarea id="descripcion">  </textarea><br><br><br>
                 
                     <label for="precio">Precio:</label><br>
                     <input type="number" id="precio" name="precio_producto"><br><br><br>
@@ -33,7 +33,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
                     <br><br><br><br>
                     
-                    <button id="btn_enviar" type="button" class="boton"> Enviar</button>
+                    <button id="btn_enviar" type="submit" class="boton"> Enviar</button>
                     <button id="btn_cancelar" type="button" class="boton"> Cancelar</button><br><br>
                     <h5>David</h5>
 
@@ -42,5 +42,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         </div>
   
     </body>
-
+   
+    
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous">    </script>
+    
+    <script src="../../assets/js/validaciones.js" type="text/javascript"> </script>
+    
+    
 </html>
