@@ -1,8 +1,0 @@
-<?php
-
-/* 
- 
- @autor David Ginaca
- */
- 
-

@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to edit this template
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+<?php
+      
+  
+
+include './backend/class/base_datos.php';
+include './backend/class/categorias.php';
+
+
+
+$categoria = new categorias();
+$categoria-> nombre ='software';
+$categoria-> guardar();
+
+$lista_categorias = categorias::listar();
+
+echo '<pre>';
+print_r($lista_categorias);
+echo '</pre>';
+
+      
+    
+

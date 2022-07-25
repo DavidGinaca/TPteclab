@@ -1,15 +1,46 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
 <html>
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>
+            <center>
+                <table style='width: 50%'>
+                    <thead>
+                        <tr> 
+                            <th>&nbsp;</th>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($listas_categorias as $categoria){ ?> 
+                        <tr> 
+                            <td> 
+                                
+                                <a href="?edit=<?php echo $categoria['id'] ?>">Editar</a>       
+                            </td>
+                            <td><?php echo $categoria['id'] ?></td>
+                            <td><?php echo $categoria['nombre'] ?></td>                        
+                        </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+                <a href="categorias.php?add=1">Agregar</a>
+            </center>               
+        </div>
+   
+    
+    
+    
     </body>
+   
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    crossorigin="anonymous" ></script>
+   
+
 </html>

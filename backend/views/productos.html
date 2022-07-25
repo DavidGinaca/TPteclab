@@ -1,53 +1,30 @@
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
 <html>
     <head>
-        <title>Formulario Productos</title>
+        <title>Alta de categorias</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../../assets/css/estilo_formularios.css">
-        <link rel="icon" type="image/ico" href="../../assets/img/logo.ico" >
     </head>
     <body>
         <div>
-            <h1>Productos</h1><br><br>
-          
-            <form method="POST" id="formulario_productos">
-                    <label for="pnombre">Producto:</label><br>
-                    <input type="text" id="pnombre" name="nombre_producto" required><br><br><br>
-                  
-                    <label for="img">Imagen:</label><br>
-                    <input type="file" id="img" name="lmagen_producto"><br><br><br>
-                
-                    <label>Descripcion:</label><br>
-                    <textarea id="descripcion">  </textarea><br><br><br>
-                
-                    <label for="precio">Precio:</label><br>
-                    <input type="number" id="precio" name="precio_producto"><br><br><br>
-            
-                    <label for="categorias">Categorias:</label><br>
-                    <input type="number" id="categorias" name="nombre_producto"><br><br><br>
+            <h2>Categorias</h2>
 
-                    <br><br><br><br>
-                    
-                    <button id="btn_enviar" type="submit" class="boton"> Enviar</button>
-                    <button id="btn_cancelar" type="button" class="boton"> Cancelar</button><br><br>
-                    <h5>David</h5>
-
+            <form>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname">
+                    <input type="submit" value="Submit">
             </form>
-      
-        </div>
-  
+                    </div>
     </body>
-   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    crossorigin="anonymous" ></script>
     
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
-    crossorigin="anonymous">    </script>
-    
-    <script src="../../assets/js/validaciones.js" type="text/javascript"> </script>
-    
-    
+    <script src="../../assets/js/validaciones.js" type="text/javascript"></script>
+        
 </html>
