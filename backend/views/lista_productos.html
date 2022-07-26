@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
+
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Lista productos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div>
+         
+            <table>
+                <thead>
+                    <tr> 
+                        <th>Nombre</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                    <?php foreach ($lista_categorias as $idx => $categoria){ ?>
+                    
+                        <td> <?php echo $categoria['nombre']?></td>
+                    
+                        <?php if (($idx + 1) % 4 == 0){ ?>
+                        
+                    </tr><tr>
+                    
+                    <?php } 
+                            } ?>
+                    </tr>
+                </tbody>
+            </table>
+            
+            
+        </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     crossorigin="anonymous" ></script>

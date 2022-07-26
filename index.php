@@ -2,21 +2,13 @@
       
   
 
-include './backend/class/base_datos.php';
-include './backend/class/categorias.php';
+include './backend/class/autoload.php';
 
 
-
-$categoria = new categorias();
-$categoria-> nombre ='software';
-$categoria-> guardar();
 
 $lista_categorias = categorias::listar();
 
-echo '<pre>';
-print_r($lista_categorias);
-echo '</pre>';
+include './backend/views/lista_productos.html';
 
       
     
-

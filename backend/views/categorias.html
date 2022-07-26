@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
--->
+
 <html>
     <head>
         <title>Alta categorias</title>
@@ -13,13 +10,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             <div>
                 <h2>Categorias</h2>
 
-                <form method="POST" id="formulario_categorias">
+                <form method="POST" id="formulario_categorias" enctype="multipart/form-data">
                     
                     <input type="hidden" name ="accion" value ="guardar">
                     <input type="hidden" name="id" value="<?php echo isset($_POST['id']) ? $_POST['id'] : '' ?>">                     
+                    
                     <label for="cname">Nombre</label><br>
                     <input type="text" id="cname" name="nombre_categorias" placeholder="ingrese nombre" 
-                           value="<?php echo isset($_POST['nombre_categorias']) ? $_POST['nombre_categorias'] : ''  ?>" maxlength="80" minlength="3" autocomplete="off" required="" ><br><br>
+                           values="<?php echo isset($_POST['nombre_categorias']) ? $_POST['nombre_categorias'] : ''  ?>" maxlength="80" minlength="3" autocomplete="off" required="" ><br><br>
+                    <br>
+                                                        
+                    <label for="imagen_categoria">Imagen categoria</label><br>
+                    <input type="file" id="imagen_categoria" name="imagen" placeholder="subir imagen" 
+                           values="" autocomplete="off" required="" ><br><br>
+                   
                     <button type="submmit">Aceptar</button>
                     
                  </form>

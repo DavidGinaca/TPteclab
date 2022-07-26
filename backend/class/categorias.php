@@ -2,6 +2,7 @@
 class categorias{
     private $id;
     public $nombre;
+    public $img;
     private $_exists = false;
     
     function __construct($id = null) {
@@ -11,6 +12,7 @@ class categorias{
             if (isset($categoria[0]['id'])){
                 $this->id = $categoria[0]['id'];
                 $this->nombre = $categoria[0]['nombre'];
+                $this->img = $categoria[0] ['img'];
                 $this->_exists = true;
             }
         }
@@ -22,7 +24,7 @@ class categorias{
     
     private function _insertar(){
         $dbm = self::_conexion();
-        $resp = $dbm->insert("categorias", "nombre", "?", array($this->nombre));
+        $resp = $dbm->insert("categorias", "nombre, img", "?, ?", array($this->nombre, $this->img));
         if ($resp){
             $this->id = $resp;
             $this->_exists = true;
@@ -35,7 +37,7 @@ class categorias{
     
     private function _actualizar(){
         $dbm = self::_conexion();
-        return $dbm->update("categorias", "nombre = ?", "id = ?", array($this->nombre, $this->id));
+        return $dbm->update("categorias", "nombre = ?, img = ?", "id = ?", array($this->nombre, $this->img, $this->id));
     }
     
     public function eliminar(){

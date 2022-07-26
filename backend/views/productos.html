@@ -5,20 +5,33 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html>
     <head>
-        <title>Alta de categorias</title>
+        <title>Alta de productos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div>
-            <h2>Categorias</h2>
+            <h2>Productos</h2>
 
-            <form>
-                    <label for="fname">First name:</label><br>
-                    <input type="text" id="fname" name="fname"><br>
-                    <label for="lname">Last name:</label><br>
-                    <input type="text" id="lname" name="lname">
-                    <input type="submit" value="Submit">
+            <form method="POST" id='formulario_productos'>
+                    <label for="prod_nombre">Nombre</label><br>
+                    <input type="text" id="prod_nombre" name="nombre_producto" placeholder="ingrese nombre" maxlength="80" minlength="3" autocomplete="off"><br><br>
+                   
+                    <label for="prod_img">Imagen categoria</label><br>
+                    <input type="file" id="prod_img" name="prodImg" placeholder="subir imagen" 
+                           values="" autocomplete="off"><br><br>
+                    
+                    <label for="prod_descripcion">Descripcion</label><br>
+                    <textarea id="desc"> </textarea><br><br> 
+                    
+                    <label for="prod_precio">Precio</label><br>
+                    <input type="number" id="prod_precio" name="prodPrecio" placeholder="ingrese precio" autocomplete="off"><br><br>
+                    
+                    <label for="prod_categoria">Categoria</label><br>
+                    <input type="number" id="prod_categoria" name="prodCategoria" placeholder="ingrese categoria" autocomplete="off"><br><br>
+                                      
+                    <button type="submmit">Aceptar</button>
+                    <button type="button">Cancelar</button>
             </form>
                     </div>
     </body>
